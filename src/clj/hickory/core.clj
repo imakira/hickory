@@ -50,7 +50,7 @@
   ;; Note the attribute value is not html-escaped; see comment for Element.
   (as-hiccup
     ([this] (trampoline as-hiccup this (hzip/hiccup-zip this)))
-    ([this _] [(utils/lower-case-keyword (.getKey this)) (.getValue this)]))
+    ([this _] [(keyword (.getKey this)) (.getValue this)]))
   Attributes
   (as-hiccup
     ([this] (trampoline as-hiccup this (hzip/hiccup-zip this)))
